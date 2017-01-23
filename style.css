@@ -49,6 +49,11 @@ a {
 	cursor: pointer;
 }
 
+#reset {
+	text-align: center;
+	background-color: lightgreen;
+}
+
 @media all and (max-width: 800px) {
   .flex-container {
     /* On small screens, we are no longer using row direction but column */
@@ -60,3 +65,5 @@ a {
   	width: initial;
   }
 }
+
+

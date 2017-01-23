@@ -1,7 +1,7 @@
 var myHtml = "";
 
 var reset = function() {
-	$('body').on('click', '#nav', function(){
+	$('body').on('click', '#reset', function(){
 		show_categories("categories");
 	})
 }
@@ -9,7 +9,7 @@ var reset = function() {
 var show_categories = function(category) {	
 	myHtml = "<div class='flex-container'>";
 	$.each( window[category], function( i, item ) {
-	    myHtml += "<p class= 'card "+ category +" cats' id="+ item.toLowerCase() +" ><a href='#'>" + item + "</a></p>";
+	    myHtml += "<div class= 'card "+ category +" cats' id="+ item.toLowerCase() +" ><a href='#'>" + item + "</a></div>";
 	});
 	myHtml += "</div>";
 	$( "#content" ).html( myHtml );
@@ -19,6 +19,7 @@ var show_questions = function (cat) {
 	$.each( window[cat] , function( i, item ) {
 		myHtml += "<p class= 'card faqs' id='" + cat + "-" + i +"'><a href='#'>" + item.question + "</a></p>";
 	})
+	myHtml += "<div id='reset' class= 'card'><a href='#'> Start Again! </a></p>";
 	$( "#content" ).html( myHtml );
 }
 
@@ -51,6 +52,7 @@ var show_answers = function(){
 		var num = this.id.substr(this.id.indexOf('-') + 1, this.id.length);
 		myHtml  = "<div class='card'><p><b>" + window[cat][num].question + "</b></p>"
 		myHtml += "<p>" + window[cat][num].answer + "</p></div>"
+		myHtml += "<div id='reset' class= 'card'><a href='#'> Start Again! </a></p>";
 		$( "#content" ).html( myHtml );
 	})
 }
