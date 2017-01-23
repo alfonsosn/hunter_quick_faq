@@ -9,7 +9,7 @@ var reset = function() {
 var show_categories = function(category) {	
 	myHtml = "<div class='flex-container'>";
 	$.each( window[category], function( i, item ) {
-	    myHtml += "<div class= 'card "+ category +" cats' id="+ item.toLowerCase() +" ><a href='#'>" + item + "</a></div>";
+	    myHtml += "<p class= 'card "+ category +" cats' id="+ item.toLowerCase() +" ><a href='#'>" + item + "</a></p>";
 	});
 	myHtml += "</div>";
 	$( "#content" ).html( myHtml );
