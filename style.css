@@ -1,0 +1,59 @@
+body{
+	margin: auto;
+	width: 800px;
+	max-width: 90%;
+	font-size: 1em;
+	background-color: rgba(132, 132, 132, 0.3);
+	font-family: "verdana";
+}
+
+a {
+	text-decoration: none;
+	color: blue;
+}
+
+#nav{
+	padding: 1px;
+	padding-left: 10px;
+	background-color:  #448CE5;
+	color: white;
+	font-size: 1.5em;
+	top: 0;
+}
+
+#content{
+	font-size: 1.2em;
+}
+
+.card{
+	margin: 5px;
+	padding: 5px;
+	background: #fcfcfc; 
+	border: 1px solid #e6e6e6 !important; 
+	box-shadow: .2px .2px .2px lightgrey; 
+}
+
+.flex-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+.cats {
+	border: 2px #448CE5 solid;
+	width: 100%;
+	margin: 1em;
+	line-height: 150px;
+	text-align: center;
+	cursor: pointer;
+}
+
+@media all and (max-width: 800px) {
+  .flex-container {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+  .cats {
+  	margin: 0em;
+  	line-height: 50px;
+  }
+}
